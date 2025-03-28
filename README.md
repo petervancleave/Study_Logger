@@ -36,18 +36,13 @@ The executable will be created in the `dist` directory.
 ## Data Storage
 - Study sessions are stored in a local SQLite database (`tracker.db`)
 - The database is automatically created when you first run the application
-- The database file is not included in the repository to keep your study data private
 
 ## Development
 - Built with PySide6 (Qt for Python)
 - Uses SQLite for data storage
 - Dark theme with modern styling
 
-## Default Achievements
+## Achievements
 
-- Time Lord: Track 10 hours total
-- Dedicated Learner: Complete a 2-hour session
-- Early Bird: Start a session before 8 AM
-- Night Owl: Complete a session after 10 PM
-
-More achievements can be added by modifying the database directly.
+- Coming Soon
+(More achievements can be added by modifying the database directly)
