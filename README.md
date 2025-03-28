@@ -3,7 +3,6 @@
 - Clean, modern dark-themed UI
 - Track study sessions with start/stop functionality
 - View total time spent learning
-- Achievement system with unlockable milestones
 - Persistent storage using SQLite database
 
 ## Installation
