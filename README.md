@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/61b2e9e7-958f-4ec4-8ed7-c4caf2870dd8)
+
+
 ## Features
 
 - Clean, modern dark-themed UI
