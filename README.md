@@ -6,7 +6,7 @@
 
 ## Features
 
-- Clean, modern dark-themed UI
+- Dark-themed UI
 - Track study sessions with start/stop functionality
 - View total time spent learning
 - Persistent storage using SQLite database
