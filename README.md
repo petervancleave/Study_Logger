@@ -55,6 +55,5 @@ The executable will be created in the `dist` directory.
 - Dark theme with modern styling
 
 ## Achievements
-
-- Coming Soon
+???
 (More achievements can be added by modifying the database directly)
