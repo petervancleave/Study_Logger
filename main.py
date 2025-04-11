@@ -13,7 +13,7 @@ class HackingTracker(QMainWindow):
         self.setWindowTitle("Study Logger")
         self.setMinimumSize(800, 600)
         
-        # Set application-wide font
+        # font settings
         font_id = QFontDatabase.addApplicationFont("https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf/JetBrainsMono-Regular.ttf")
         if font_id != -1:
             font_family = QFontDatabase.applicationFontFamilies(font_id)[0]
@@ -33,7 +33,7 @@ class HackingTracker(QMainWindow):
         self.conn = sqlite3.connect('tracker.db')
         self.cursor = self.conn.cursor()
         
-        # Create sessions table if it doesn't exist
+        # create sessions table if it doesn't exist
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS sessions (
                 id INTEGER PRIMARY KEY,
@@ -93,26 +93,26 @@ class HackingTracker(QMainWindow):
             }
         ''')
 
-        # Create central widget and layout
+        # central widget and layout
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
         layout.setSpacing(20)
         layout.setContentsMargins(30, 30, 30, 30)
 
-        # Timer display
+        # display for timer
         self.time_label = QLabel("00:00:00")
         self.time_label.setFont(QFont("JetBrains Mono", 48))
         self.time_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.time_label)
 
-        # Total time tracked
+        # time tracking (total)
         self.total_time_label = QLabel("Total Time: 0.00 hours")
         self.total_time_label.setFont(QFont("JetBrains Mono", 14))
         self.total_time_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.total_time_label)
 
-        # Control buttons
+        # Controls
         button_layout = QHBoxLayout()
         
         self.start_button = QPushButton("Start Session")
@@ -177,7 +177,7 @@ class HackingTracker(QMainWindow):
             hours = dialog.hours_spin.value()
             minutes = dialog.minutes_spin.value()
             
-            # Convert to seconds, negative if removing time
+            # convert to seconds, make negative if removing time
             seconds = (hours * 3600) + (minutes * 60)
             if dialog.remove_radio.isChecked():
                 seconds = -seconds
@@ -199,7 +199,7 @@ class TimeEntryDialog(QDialog):
         
         layout = QVBoxLayout(self)
         
-        # Radio buttons for add/remove
+        # add buttons for add/remove
         radio_layout = QHBoxLayout()
         self.add_radio = QRadioButton("Add Time")
         self.remove_radio = QRadioButton("Remove Time")
@@ -207,7 +207,7 @@ class TimeEntryDialog(QDialog):
         radio_layout.addWidget(self.add_radio)
         radio_layout.addWidget(self.remove_radio)
         
-        # Group radio buttons
+        # group
         self.button_group = QButtonGroup()
         self.button_group.addButton(self.add_radio)
         self.button_group.addButton(self.remove_radio)
@@ -232,7 +232,7 @@ class TimeEntryDialog(QDialog):
         minutes_layout.addWidget(self.minutes_spin)
         layout.addLayout(minutes_layout)
         
-        # Add OK and Cancel buttons
+        # add ok and cancel
         button_box = QDialogButtonBox(
             QDialogButtonBox.StandardButton.Ok | 
             QDialogButtonBox.StandardButton.Cancel
