@@ -10,9 +10,8 @@ A study logger application built with python. I wanted a way to manually time an
 ![image](https://github.com/user-attachments/assets/6aaf610c-9515-4dbe-855d-330abdf669e1)
 
 
-## Features
+## Usage
 
-- Dark-themed UI
 - Track study sessions with start/stop functionality
 - View total time spent learning
 - Persistent storage using SQLite database
